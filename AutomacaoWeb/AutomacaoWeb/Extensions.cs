@@ -14,5 +14,12 @@ namespace AutomacaoWeb
         {
             return randomSeed.Next(lengthVetor);
         }
+
+        public static string getShortTimeFileName(this string appendedName)
+        {
+            var dateTimeFileName = appendedName + string.Format("_{0:hh-mm-ss_dd-MM-yyyy}", DateTime.Now);
+
+            return dateTimeFileName;
+        }
     }
 }

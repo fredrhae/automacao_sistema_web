@@ -52,7 +52,9 @@ namespace AutomacaoWeb
             
             Screenshot ss = ((ITakesScreenshot)webDriver).GetScreenshot();
 
-            ss.SaveAsFile(evidencesFolder + "current_screenshot.png", ImageFormat.Png);
+            var fileName = "screenshot".getShortTimeFileName() + ".png";
+
+            ss.SaveAsFile(evidencesFolder + fileName, ImageFormat.Png);
         }
 
         public static void ScrollToTop()
