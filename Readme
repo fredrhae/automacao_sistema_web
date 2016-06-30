@@ -1,0 +1,24 @@
+############  Pré-requisitos para rodar a aplicação:  ############
+
+- Ter o gerenciador de pacotes nuget instalado e baixar os seguintes pacotes ao abrir o projeto pela primeira vez:
+	* log4net 2.0.5
+	* Selenium Webdriver
+	* Selenium Webdriver Support Classes
+	
+- Ter o Visual Studio 2013 ou mais novo
+- Ter o Firefox instalado 
+	* Pois o Selenium o suporta nativamente, para utilizar outros browsers teríamos que executar passos mais complexos.
+- Ter a pasta C:/Projeto criada no disco, lá serão armazenados o log e o printscreen.
+
+###########   Pontos a serem destacados do código   #############
+
+- O código foi feito pensando na escalabilidade abstraindo o objeto browser. Desta forma, pode-se facilmente criar um 
+driver dependendo do tipo de browser onde será executado futuramente.
+
+- O projeto já está preparado para suportar várias páginas de teste, só bastando adicionar as páginas no namespace "Pages" 
+criando as respectivas páginas com suas especificidades e, se necessário, adicionando as outras opções da barra de navegação superior.
+
+- Para facilitar a geração de logs, está integrado com o projeto o log4net, a biblioteca de geração de log mais utilizada nos 
+projetos em .Net. Ela é bastante versátil e fácil de utilizar, podendo ajudar em um processo de teste mais completo com várias 
+funcionalidades que possam ser adicionadas neste projeto. Atualmente, ele está configurado para logar as saídas no console e em 
+um arquivo texto na pasta C:/Projeto.
