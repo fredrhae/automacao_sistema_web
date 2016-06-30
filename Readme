@@ -22,3 +22,20 @@ criando as respectivas páginas com suas especificidades e, se necessário, adic
 projetos em .Net. Ela é bastante versátil e fácil de utilizar, podendo ajudar em um processo de teste mais completo com várias 
 funcionalidades que possam ser adicionadas neste projeto. Atualmente, ele está configurado para logar as saídas no console e em 
 um arquivo texto na pasta C:/Projeto.
+
+###########   Melhorias da Página de Contato DBServer  ############
+
+- Colocar títulos para cada botão da barra de navegação superior. Dessa forma pode-se automatizar o teste mais facilmente checando 
+se a página carregada tem o título esperado. Por exemplo, o título da página de Contato poderia ser: "Contato - DBServer Assessoria em Sistema de Informação"
+
+- Colocar IDs para os botões da barra de navegação superior, fica difícil automatizar sem um ID já que temos que encontrar outra forma 
+de selecionar um link. Por exemplo, para encontrar o link que direciona para a página contato tive que procurar pelo elemento que 
+tivesse o 'href' apontando para contato.html.
+
+- Nome comercial no dropdown menu de Setor está com erro de português.
+- Definir um id pros seguintes elementos HTML:
+	- Campo de texto para colocar o nome. (Para encontrá-lo precisei usar o conteúdo do parâmetro 'name');
+	- Campo de texto para colocar o email. (Para encontrá-lo precisei usar o conteúdo do parâmetro 'name');
+	- Botão de enviar formulário. (Não precisei usar, mas se fosse procurar seria um pouco mais complicado já que está sem o 
+	Id setado);
+	
