@@ -26,8 +26,6 @@ namespace AutomacaoWeb
         [FindsBy(How = How.Id, Using = "message")]
         private IWebElement messageTextField;
 
-        [FindsBy(How = How.CssSelector, Using = "input[type='submit']")]
-        private IWebElement registerButton;
 
         public void Goto()
         {
