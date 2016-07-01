@@ -1,0 +1,32 @@
+############  Pré-requisitos para rodar a aplicação:  ############
+
+- Ter certeza que os pacotes nuget abaixo estão instalados no projeto:
+	* log4net 2.0.5
+	* Selenium Webdriver
+	* Selenium Webdriver Support Classes
+	
+- Ter o Visual Studio 2013 ou mais novo
+- Ter o Firefox instalado 
+	* Pois o Selenium o suporta nativamente, para utilizar outros browsers teríamos que executar passos mais complexos.
+- Ter a pasta C:/Projeto criada no disco, lá serão armazenados o log e o printscreen.
+
+###########   Pontos a serem destacados do código   #############
+
+- O código foi feito pensando na escalabilidade abstraindo o objeto browser. Desta forma, pode-se facilmente criar um driver dependendo do tipo de browser onde será executado futuramente.
+
+- As classes criadas foram estáticas para facilitar uma automatização utilizando testes unitários, evitando a criação de objetos para cada teste.
+
+- Além disso, foi utilizado o padrão Factory para cada página usada na automação. Desta forma, projeto já está preparado para suportar várias páginas de teste, só bastando adicionar as páginas no namespace "Pages" criando as respectivas páginas com suas especificidades e, se necessário, adicionando as outras opções da barra de navegação superior. A adição de novas páginas não irá causar quase nenhum impacto de refatoração.
+
+- Para facilitar a geração de logs, está integrado com o projeto o log4net, a biblioteca de geração de log mais utilizada nos projetos em .Net. Ela é bastante versátil e fácil de utilizar, podendo ajudar em um processo de teste mais completo com várias funcionalidades que possam ser adicionadas neste projeto. Atualmente, ele está configurado para logar as saídas no console e em um arquivo texto na pasta C:/Projeto.
+	
+###########   Melhorias da Página de Contato DBServer  ############
+
+- Colocar títulos para cada botão da barra de navegação superior. Dessa forma pode-se automatizar o teste mais facilmente checando se a página carregada tem o título esperado. Por exemplo, o título da página de Contato poderia ser: "Contato - DBServer Assessoria em Sistema de Informação"
+- Colocar IDs para os botões da barra de navegação superior, fica difícil automatizar sem um ID já que temos que encontrar outra forma de selecionar um link. Por exemplo, para encontrar o link que direciona para a página contato tive que procurar pelo elemento que tivesse o 'href' apontando para contato.html.
+- Nome comercial no dropdown menu de Setor está com erro de português.
+- Definir um id pros seguintes elementos HTML:
+	- Campo de texto para colocar o nome. (Para encontrá-lo precisei usar o conteúdo do parâmetro 'name');
+	- Campo de texto para colocar o email. (Para encontrá-lo precisei usar o conteúdo do parâmetro 'name');
+	- Botão de enviar formulário. (Não precisei usar, mas se fosse procurar seria um pouco mais complicado já que está sem o Id setado);
+	
