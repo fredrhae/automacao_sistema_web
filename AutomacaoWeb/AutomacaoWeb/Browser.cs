@@ -13,6 +13,12 @@ namespace AutomacaoWeb
         private static string evidencesFolder = "C:/Projeto/";
         private static IWebDriver webDriver = new FirefoxDriver();
 
+
+        static Browser()
+        {
+            Initialize();
+        }
+
         public static void Initialize()
         {
             log.Info("Inicializando browser para testar aplicação...");

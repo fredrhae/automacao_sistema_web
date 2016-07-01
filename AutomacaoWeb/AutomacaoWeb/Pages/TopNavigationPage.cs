@@ -3,9 +3,8 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace AutomacaoWeb
 {
-    public class TopNavigationPage
+    public class TopNavigationPage : Pages<TopNavigationPage>, IPage
     {
-
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         
         [FindsBy(How = How.CssSelector, Using = "[href*='contato.html")]
@@ -15,6 +14,17 @@ namespace AutomacaoWeb
         {
             log.Info("Selecionando contato na barra de navegação superior...");
             contactLink.Click();
+        }
+
+        public void Goto()
+        {
+            // FIXME
+        }
+
+        public bool IsAt()
+        {
+            // TODO
+            return true;
         }
 
     }

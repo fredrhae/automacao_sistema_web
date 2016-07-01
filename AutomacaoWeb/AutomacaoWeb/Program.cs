@@ -8,9 +8,8 @@ namespace AutomacaoWeb
     {
         static void Main(string[] args)
         {
-            Browser.Initialize();
-            Pages.Contact.Goto();
-            Pages.Contact.FillContactForm();
+            ContactPage.Instance.Goto();
+            ContactPage.Instance.FillContactForm();
             Browser.TakeScreenShot();
             Browser.Close();
         }

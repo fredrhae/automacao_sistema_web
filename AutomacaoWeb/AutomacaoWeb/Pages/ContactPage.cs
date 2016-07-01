@@ -7,7 +7,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace AutomacaoWeb
 {
-    public class ContactPage
+    public class ContactPage : Pages<ContactPage>, IPage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -29,7 +29,7 @@ namespace AutomacaoWeb
 
         public void Goto()
         {
-            Pages.TopNavigation.Contact();
+            TopNavigationPage.Instance.Contact();
         }
 
         public bool IsAt()
