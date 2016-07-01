@@ -301,6 +301,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-AutomacaoWeb/.nuget/NuGet.Config
-AutomacaoWeb/.nuget/NuGet.exe
-AutomacaoWeb/.nuget/NuGet.targets
