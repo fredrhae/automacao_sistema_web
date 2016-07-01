@@ -18,12 +18,11 @@ namespace AutomacaoWeb
 
         public void Goto()
         {
-            // FIXME
+            // Not applied
         }
 
         public bool IsAt()
         {
-            // TODO
             return true;
         }
 

@@ -4,8 +4,6 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace AutomacaoWeb
 {
-
-
     public interface IPage
     {
         void Goto();
